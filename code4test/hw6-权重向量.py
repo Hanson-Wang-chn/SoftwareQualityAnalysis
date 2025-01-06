@@ -1,5 +1,4 @@
 import numpy as np
-from scipy.optimize import minimize
 
 
 # 定义正互反判断矩阵A

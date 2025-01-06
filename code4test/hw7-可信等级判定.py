@@ -1,6 +1,6 @@
 import math
 import matplotlib.pyplot as plt
-import numpy as np
+
 
 # 权重
 weight = [0.05, 0.17, 0.20, 0.15, 0.09, 0.09, 0.11, 0.05, 0.09]
@@ -31,14 +31,14 @@ def grade_to_value(grade):
     else:
         return 0.0
 
-# 计算信任值
+# 计算可信值
 def calculate_trust(values, weights):
     trust_value = 1.0
     for i in range(len(values)):
         trust_value *= math.pow(values[i], weights[i])
     return trust_value
 
-# 判断信任等级
+# 判断可信等级
 def judge_trust_level_07(component_trust_values, key_component_count, overall_trust):
     total_components = len(component_trust_values)
     key_threshold = 3

@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.19)  7 JAN 2025 00:12
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.19)  7 JAN 2025 00:16
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**project1.tex
-(./project1.tex
+**paper.tex
+(./paper.tex
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2024-11-02>
 (c:/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -837,8 +837,8 @@ File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
 
 Package xeCJK Warning: Redefining CJKfamily `\CJKttdefault' (FangSong).
 
-(./project1.aux)
-\openout1 = `project1.aux'.
+(./paper.aux)
+\openout1 = `paper.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 59.
 LaTeX Font Info:    ... okay on input line 59.
@@ -1000,44 +1000,35 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 LaTeX Font Warning: Font shape `U/wasy/m/n' in size <10.53937> not available
 (Font)              size <10.95> substituted on input line 64.
 
-(./project1.toc)
+(./paper.toc)
 \tf@toc=\write4
-\openout4 = `project1.toc'.
-
-File: img/1.png Graphic file (type bmp)
-<img/1.png>
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "黑体/BI" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "黑体/B" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "黑体/I" (it probably doesn't
-(fontspec)             exist).
-
-
-Package fontspec Info: 
-(fontspec)             Font family '黑体(0)' created for font '黑体' with options
-(fontspec)             [Script={CJK}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"黑体/OT:script=hani;language=dflt;"
+\openout4 = `paper.toc'.
 
 
 
 [1
 
-]
+] (./paper.aux)
+ ***********
+LaTeX2e <2024-11-01> patch level 1
+L3 programming layer <2022/08/05>
+ ***********
 
-[2]
 
-[3
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.41063pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 21947 strings out of 473965
+ 491369 string characters out of 5736631
+ 882682 words of memory out of 5000000
+ 44472 multiletter control sequences out of 15000+600000
+ 563496 words of font info for 89 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 93i,11n,111p,436b,420s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on paper.pdf (1 page).

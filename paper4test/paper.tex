@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{fancyhdr}
+\usepackage{ctex}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage[a4paper, body={18cm,22cm}]{geometry}
+\usepackage{amsmath,amssymb,amstext,wasysym,enumerate,graphicx}
+\usepackage{float,abstract,booktabs,indentfirst,amsmath}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{url}
+\usepackage{diagbox}
+\renewcommand\arraystretch{1.4}
+\usepackage{indentfirst}
+\setlength{\parindent}{2em}
+\usepackage{enumitem}
+\setmonofont{Consolas}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{makecell}
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta}
+\setCJKmonofont{黑体}
+\lstset{  
+	% 基本设置  
+	xleftmargin = 3em, xrightmargin = 3em, aboveskip = 1em,  
+	backgroundcolor = \color{white},  
+	basicstyle = \small\ttfamily,  
+	rulesepcolor = \color{gray},  
+	breaklines = true,  
+	numbers = left,  
+	numberstyle = \small,  
+	numbersep = -14pt,  
+	frame = shadowbox,  
+	showspaces = false,  
+	columns = fixed,  
+	sensitive = true,  
+	% VSCode 风格配色  
+	keywordstyle = \color{blue!70!black}\bfseries,  
+	emphstyle = \color{red!70!black}\bfseries, % 对于强调的词  
+	emphstyle=[2]\color{purple!70!black}\bfseries, % 对于第二组强调的词  
+	commentstyle = \color{green!60!black}, % 注释颜色  
+	stringstyle = \color{orange!90!black}, % 字符串颜色更亮一些  
+	morekeywords={ASSERT, int64\_t, uint32\_t},  
+	moreemph={ASSERT, NULL},  
+	moreemph=[2]{int64\_t, uint32\_t, tid\_t, uint8\_t, int16\_t, uint16\_t, int32\_t, size\_t, bool},  
+	morecomment=[l][\color{green!60!black}]{+}, % 以+开头的注释  
+}
+
+%--------------------页眉--------------------%
+\pagestyle{fancy}
+\fancyhead[L]{}
+\fancyhead[R]{}
+\fancyhead[C]{华东师范大学软件工程学院}
+\fancyfoot[C]{-\thepage-}
+\renewcommand{\headrulewidth}{1.5pt}
+%--------------------标题--------------------%
+\begin{document}
+\begin{center}
+	{\Large{\textbf{\heiti 软件质量分析期末考试}}}
+	\begin{table}[H]
+		\centering
+		\begin{tabular}{p{2cm}p{4cm}<{\centering}p{1cm}p{2cm}p{6cm}<{\centering}}
+			课程名称:    & 软件质量分析 & \quad & 指导教师:    & 陈仪香
+			\\ \cline{2-2} \cline{5-5}
+			姓\qquad 名: & 王海生    & \quad & 学\qquad 号: & 10235101559
+			\\ \cline{2-2} \cline{5-5}
+			年\qquad 级: & 2023级    & \quad & 主\qquad 题: & 期末考试
+			\\ \cline{2-2} \cline{5-5}
+		\end{tabular}
+	\end{table}
+	
+	% 添加新行并居中
+	%\vspace{1em} % 可选：添加垂直间距
+\end{center}
+\rule{\textwidth}{1pt}
+
+\tableofcontents
+
+%--------------------正文--------------------%
+\section{第一题}
+
+
+
+\section{第二题}
+
+\end{document}
