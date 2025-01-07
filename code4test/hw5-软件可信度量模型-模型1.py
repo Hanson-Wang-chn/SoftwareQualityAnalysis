@@ -12,7 +12,7 @@ def calculate_T(y_values, alphas, epsilon=None, rho=None):
 
     返回:  
         float: 计算得到的 T 值。  
-    """  # 验证数据
+    """
 
     # 计算 T 值
     if epsilon is not None and rho is not None:

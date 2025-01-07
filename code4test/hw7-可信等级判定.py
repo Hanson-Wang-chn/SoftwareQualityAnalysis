@@ -18,18 +18,7 @@ childWeight = [
     0.33, 0.33, 0.34   # 指标9子权重
 ]
 
-# 将等级转换为对应数值
-def grade_to_value(grade):
-    if grade == 'A':
-        return 10.0
-    elif grade == 'B':
-        return 9.0
-    elif grade == 'C':
-        return 7.0
-    elif grade == 'D':
-        return 2.0
-    else:
-        return 0.0
+
 
 # 计算可信值
 def calculate_trust(values, weights):
@@ -137,18 +126,12 @@ def plot_bar_chart(software_numbers, trust_values, trust_levels):
 
 # 主函数
 def main():
-    # 8组28个等级数据
-    grades = [
-        # ['C', 'B', 'C', 'D', 'B', 'B', 'C', 'A', 'C', 'D', 'C', 'A', 'C', 'C', 'C', 'C', 'C', 'A', 'D', 'C', 'A', 'A', 'A', 'B', 'B', 'C', 'C', 'D'],
-        "CBCDBBCACDCACCCCCADCAAABBCCD",
-        ['C', 'B', 'B', 'B', 'D', 'D', 'B', 'C', 'C', 'C', 'B', 'C', 'B', 'C', 'C', 'A', 'B', 'A', 'A', 'C', 'A', 'A', 'A', 'B', 'B', 'A', 'A', 'A'],
-        ['A', 'B', 'B', 'B', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'A', 'B', 'B', 'B', 'A', 'B', 'A', 'A', 'C', 'A', 'A', 'A', 'B', 'B', 'A', 'A', 'A'],
-        ['C', 'B', 'B', 'B', 'D', 'A', 'B', 'C', 'C', 'C', 'B', 'C', 'B', 'A', 'A', 'A', 'B', 'A', 'A', 'A', 'A', 'A', 'A', 'B', 'B', 'A', 'A', 'A'],
-        ['C', 'B', 'B', 'B', 'D', 'D', 'B', 'C', 'C', 'C', 'B', 'C', 'B', 'C', 'C', 'A', 'B', 'A', 'A', 'C', 'A', 'A', 'A', 'B', 'B', 'A', 'A', 'A'],
-        ['C', 'B', 'B', 'B', 'D', 'D', 'A', 'B', 'C', 'C', 'B', 'C', 'B', 'B', 'B', 'A', 'B', 'A', 'A', 'C', 'A', 'A', 'A', 'B', 'B', 'A', 'A', 'A'],
-        # ['C', 'B', 'B', 'B', 'D', 'D', 'B', 'C', 'C', 'C', 'B', 'C', 'B', 'C', 'C', 'A', 'B', 'A', 'A', 'C', 'A', 'A', 'A', 'B', 'B', 'A', 'A', 'A'],
-        "AAAAAAAAAAAAAAAAAAAAAAAAAAAB",
-        ['C', 'D', 'D', 'D', 'D', 'D', 'B', 'C', 'C', 'C', 'D', 'C', 'D', 'C', 'C', 'D', 'B', 'D', 'D', 'C', 'D', 'D', 'D', 'D', 'D', 'D', 'D', 'B']
+    # 4组28个子属性平均值
+    child_trust_values_list = [
+        [9.1, 8.9, 7.6, 9.2, 7.8, 7.9, 8.9, 7.8, 7.9, 7.6, 7.5, 9.0, 9.1, 7.6, 8.9, 9.0, 7.9, 7.6, 9.2, 8.7, 8.9, 8.9, 9.0, 9.1, 9.4, 10, 10, 9.0],
+        [7.7, 7.9, 7.9, 9.0, 8.7, 7.9, 8.7, 8.2, 8.7, 8.2, 7.7, 8.9, 9.0, 7.7, 8.7, 8.7, 7.9, 8.7, 9.0, 7.8, 7.9, 8.9, 8.9, 9.2, 8.2, 8.9, 7.9, 10],
+        [7.9, 8.9, 8.7, 9.2, 8.9, 8.9, 7.9, 7.9, 8.7, 6.2, 7.9, 8.7, 8.7, 8.7, 7.8, 7.8, 8.9, 8.9, 9.2, 7.9, 8.7, 8.7, 7.8, 7.7, 7.6, 9.3, 9.2, 8.9],
+        [8.7, 9.2, 8.7, 9.3, 9.5, 8.7, 8.7, 9.3, 8.7, 7.7, 8.9, 9.7, 9.7, 8.7, 7.9, 8.7, 8.9, 9.2, 9.4, 8.7, 8.9, 9.4, 8.7, 8.7, 9.3, 9.5, 9.6, 8.9]
     ]
 
     # 处理每一组数据
@@ -156,8 +139,8 @@ def main():
     software_trust_values = []
     trust_levels = []
 
-    for i in range(len(grades)):
-        child_trust_values = [grade_to_value(grade) for grade in grades[i]]
+    for i in range(len(child_trust_values_list)):
+        child_trust_values = child_trust_values_list[i]
 
         # 计算各属性信任值
         attribute_trust_values = []
@@ -208,19 +191,19 @@ def main():
         trust_levels.append(trust_level)
 
         # 输出每组的各属性信任值
-        print(f"第 {10 + i} 组", end=" ")
+        print(f"ID{i + 1}：", end=" ")
         for attr_trust in attribute_trust_values:
-            print(f"{attr_trust:.3f}", end=" ")
+            print(f"{attr_trust:.5f}", end=" ")
 
         # 输出软件信任值及信任等级
         print(f" 软件信任值为 {software_trust_value:.3f}  信任等级为 {trust_level}")
 
     # 可视化属性信任值
-    labels = [f"Software Number {10 + i}" for i in range(len(grades))]
+    labels = [f"ID{i + 1}" for i in range(len(child_trust_values_list))]
     plot_line_chart("Software Reliability Attributes Line Chart", "Attributes", "Trust Value", attribute_trust_values_list, labels)
 
     # 可视化软件信任值（条形图）
-    software_numbers = range(10, 10 + len(grades))
+    software_numbers = range(1, 1 + len(child_trust_values_list))
     plot_bar_chart(software_numbers, software_trust_values, trust_levels)
 
 if __name__ == "__main__":

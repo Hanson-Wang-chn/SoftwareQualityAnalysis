@@ -20,25 +20,14 @@ for i in range(n):
     Hs.append(H)
     Us.append(U)
 
-print("各类别的熵：{0}".format(Hs))
-print("各类别的可信值：{0}".format(Us))
+formatted_Hs = [f"{x:.5f}" for x in Hs]
+print("各类别的熵：", formatted_Hs)
+
+formatted_Us = [f"{x:.5f}" for x in Us]
+print("各类别的可信值：", formatted_Us)
+
 T = 1
 for i in range(n):
     T *= math.pow(Us[i], theta[i])
-print("可信值：{0}".format(T))
+print("可信值：{0:.3f}".format(T))
 
-
-# 作业，t=10
-# 5
-# 0.539 0.125 0.238 0.049 0.049 1.000
-# 15 4 7 2 2
-# 0.0506 0.1845 0.0238 0.0238 0.0774 0.0774 0.0774 0.0238 0.0238 0.0506 0.0506 0.0238 0.0238 0.1042 0.1845
-# 4 7 7 4 9 4 7 7 7 4 7 7 7 9 7
-# 0.25 0.25 0.25 0.25
-# 7 9 7 7
-# 0.2340 0.1064 0.1064 0.2340 0.1064 0.1064 0.1064
-# 7 10 7 4 7 10 9
-# 0.2 0.8
-# 7 4
-# 0.10 0.90
-# 7 7

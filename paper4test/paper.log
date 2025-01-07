@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.19)  7 JAN 2025 00:16
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.19)  7 JAN 2025 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1008,7 +1008,91 @@ LaTeX Font Warning: Font shape `U/wasy/m/n' in size <10.53937> not available
 
 [1
 
-] (./paper.aux)
+]
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "黑体/BI" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "黑体/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "黑体/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family '黑体(0)' created for font '黑体' with options
+(fontspec)             [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"黑体/OT:script=hani;language=dflt;"
+
+File: img/01.png Graphic file (type bmp)
+<img/01.png>
+File: img/static_1.png Graphic file (type bmp)
+<img/static_1.png>
+
+
+[2]
+File: img/static_2.png Graphic file (type bmp)
+<img/static_2.png>
+
+
+[3]
+File: img/02.png Graphic file (type bmp)
+<img/02.png>
+File: img/0201.png Graphic file (type bmp)
+<img/0201.png>
+
+
+[4]
+File: img/0202.png Graphic file (type bmp)
+<img/0202.png>
+
+
+[5]
+File: img/static_3.png Graphic file (type bmp)
+<img/static_3.png>
+
+
+[6]
+File: img/0301.png Graphic file (type bmp)
+<img/0301.png>
+File: img/0302.png Graphic file (type bmp)
+<img/0302.png>
+
+
+[7] (c:/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2024/09/23 1.10c listings language file
+)
+
+[8]
+
+[9]
+
+[10]
+
+[11]
+
+[12]
+
+[13]
+
+[14]
+
+[15]
+
+[16]
+
+[17] (./paper.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2022/08/05>
@@ -1023,12 +1107,12 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 21947 strings out of 473965
- 491369 string characters out of 5736631
- 882682 words of memory out of 5000000
- 44472 multiletter control sequences out of 15000+600000
- 563496 words of font info for 89 fonts, out of 8000000 for 9000
+ 22753 strings out of 473965
+ 512609 string characters out of 5736631
+ 1388739 words of memory out of 5000000
+ 45247 multiletter control sequences out of 15000+600000
+ 563743 words of font info for 100 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,11n,111p,436b,420s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,15n,111p,436b,1888s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on paper.pdf (1 page).
+Output written on paper.pdf (17 pages).

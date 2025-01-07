@@ -3,11 +3,12 @@ import numpy as np
 
 # 定义正互反判断矩阵A
 A = np.array([
-    [1, 1/2, 3, 2, 1/2],
-    [2, 1 , 2 , 3, 2],
-    [1 / 3, 1/ 2, 1, 2, 1/3],
-    [1 / 2, 1/3, 1/2, 1, 2],
-    [2, 1/2, 3, 1 / 2, 1]
+    [1, 1/2, 2, 2, 1/2, 1/4],
+    [2, 1 ,1, 2, 1/2, 1/3],
+    [1/2, 1, 1, 2, 1, 1/3],
+    [1/2, 1/2, 1/2, 1, 1/2, 1/5],
+    [2, 2, 1, 2, 1, 1/2],
+    [4, 3, 3, 5, 2, 1]
 ])
 
 n = len(A)
@@ -78,9 +79,9 @@ W_LLSM = lls_method(A)
 W_CSM = csm_method(A)
 
 # 打印权重向量
-print("Weight vector using EV method:", [f"{w:.4f}" for w in W_EV])
-print("Weight vector using LLSM method:", [f"{w:.4f}" for w in W_LLSM])
-print("Weight vector using CSM method:", [f"{w:.4f}" for w in W_CSM])
+print("Weight vector using EV method:", [f"{w:.5f}" for w in W_EV])
+print("Weight vector using LLSM method:", [f"{w:.5f}" for w in W_LLSM])
+print("Weight vector using CSM method:", [f"{w:.5f}" for w in W_CSM])
 
 # 计算TD（Total Deviation）
 def total_deviation(W, A):
@@ -97,8 +98,8 @@ TD_LLSM = total_deviation(W_LLSM, A)
 TD_CSM = total_deviation(W_CSM, A)
 
 # 打印总偏差（TD）
-print("TD of EV method: {:.4f}".format(TD_EV))
-print("TD of LLSM method: {:.4f}".format(TD_LLSM))
-print("TD of CSM method: {:.4f}".format(TD_CSM))
+print("TD of EV method: {:.5f}".format(TD_EV))
+print("TD of LLSM method: {:.5f}".format(TD_LLSM))
+print("TD of CSM method: {:.5f}".format(TD_CSM))
 
 # 最终应当选择TD值最小的方法
